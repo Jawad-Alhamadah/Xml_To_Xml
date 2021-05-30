@@ -1,0 +1,274 @@
+span{
+    color:rgb(197, 45, 121);
+    font-size:15px;
+    text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+ 
+
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:8%;
+    height:8%;
+    text-align: center;
+    
+}
+
+
+body{
+    /*background-color: rgb(65, 95, 85);*/
+    background-color: rgb(41, 40, 40);
+    overflow-x: hidden;
+
+}
+form{ 
+    display: table;       display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4px;
+    row-gap: 0.005mm;
+ 
+}
+
+
+label { 
+    display: table-cell; color:rgb(67, 226, 226) ; 
+    text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px
+    
+}
+
+
+input { 
+    background-color: rgba(128, 91, 117, 0.685);  box-shadow: 4px 4px 4px  rgba(46, 41, 41, 0.685) inset;
+    border-radius: 12px;
+
+}
+
+p>input, select, textarea{
+    color: rgb(238, 226, 65);
+    text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px
+}
+input:hover { 
+     background-color: rgba(117, 78, 106, 0.541) 4px 4px 4px;  
+}
+
+#HTML{
+color:white;
+}
+
+.Highlighted_Span{
+    color: rgb(55, 235, 226);
+    text-shadow:
+    0 0 1px rgb(137, 191, 204),
+    0 0 2px rgb(92, 152, 192),
+    0 0 3px rgb(69, 63, 153),
+    0 0 4px rgba(0, 255, 255, 0.438),
+    0 0 5px rgba(0, 255, 255, 0.397),
+    0 0 5px rgba(0, 255, 255, 0.582),
+    0 0 6px rgba(0, 255, 255, 0.63),
+    0 0 7px rgba(0, 255, 255, 0.61);
+  
+
+
+}
+
+.Normal_Span{
+    color:rgb(197, 45, 121);
+   
+
+}
+
+#inputForm_Div{
+/* height:500px; */
+overflow-y: scroll;
+overflow-x: hidden;
+-webkit-box-shadow: inset -1px 2px 20px -3px #3b3838;
+box-shadow: inset -1px 2px 20px -3px #332f2f;
+}
+
+#XML_inputText_Div{ overflow-y: scroll;
+    scrollbar-color: rgb(17, 53, 48) rgb(136, 18, 14);
+    scrollbar-width: thin;
+    height:400px;
+    background-color: rgb(58, 54, 54)  ;
+    position: relative;
+    
+}
+#XML_outputText_Div{ overflow-y: scroll;
+    scrollbar-color: rgb(98, 8, 202) rgb(173, 25, 20);
+    scrollbar-width: thin;
+    height:400px;
+    padding-left: px;
+    background-color: rgb(58, 54, 54)  ;
+  
+}
+
+#XML_outputText_Div >#output_Para_element>span{
+    color:rgb(163, 42, 211);
+}
+
+
+
+.myButton {
+	box-shadow:inset 0px 34px 0px -15px #a93bb3;
+	background:linear-gradient(to bottom, #982da6 5%, #b332a2 100%);
+	background-color:#a62d82;
+	border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:#5e0037;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:6px 23px;
+	text-decoration:none;
+   
+    width:150px;
+    height:30px;
+    text-align: center;
+    
+    
+    
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #9532b3 5%, #982da6 100%);
+	background-color:#9532b3;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+        
+
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+   }
+   ::-webkit-scrollbar-thumb {
+    background: linear-gradient(38deg, #63094c 35%,#63094C 64%);
+    border-radius: 10px;
+   }
+   ::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(0deg, #9C0C73 0%,#9c0c73 100%);
+   }
+   ::-webkit-scrollbar-track{
+    background: #3a3136;
+    border-radius: 10px;
+   }
+   .grayed{
+  filter:saturate(0.1);
+  filter:brightness()(1)
+}
+
+.grayed:hover {
+    filter:brightness(1)
+}
+
+
+  ::-webkit-file-upload-button {
+	box-shadow:inset 0px 1px 0px 0px #b54b3a;
+	background-color:#a73f2d;
+	border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:#4d0b4d;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+}
+::-webkit-file-upload-button:hover {
+	background-color:#b34332;
+}
+::-webkit-file-upload-button:active {
+	position:relative;
+	top:1px;
+}
+
+.boxShadow{
+    box-shadow:         inset 0 0 15px #000000;
+}
+    
+footer{
+    text-align: center;
+    
+}
+a{
+    color:rgb(122, 27, 110)
+    ;
+    font-size: small
+}
+
+h1{
+    text-align:center;
+    color: rgb(188 13 144 / 88%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:large;
+    text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+    #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+}
+
+#XML-1{
+    color: rgb(213 25 119);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+}
+
+#XML-2{
+    color: rgb(177 24 238);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+}
+
+.custom-file-label::after {
+    left: 0;
+    right: auto;
+    border-left-width: 0;
+    border-right: inherit;
+}
+
+
+#ValueBox-Output{
+  
+    text-align: left;
+    -webkit-rtl-ordering:  left;
+ }
+ #ValueBox-Output::-webkit-file-upload-button{
+    -webkit-appearance: none;
+    float: right;
+
+ }
+
+ #warningContainer{
+     width: 50%;
+     position:absolute;
+     top:0px;
+     right:0px;
+    }
+
+    #DownloadButton{
+        justify-self: right;
+    }
