@@ -13,6 +13,11 @@ const upload = multer({
 })
 var bodyParser = require('body-parser')
 var format = require('xml-formatter');
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 require('body-parser-xml')(bodyParser);
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.json())
@@ -65,7 +70,7 @@ mongoose.connect(ConnectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
-  .then((result) => app.listen(3000, function () {
+  .then((result) => app.listen(port, function () {
     console.log("listen 3000...")
   }))
   .catch((err) => console.log(err))
