@@ -28,7 +28,7 @@ app.use(bodyParser.xml())
 app.post('/download', function (req, res) {
   //console.log(req.body.data)
   // res.send("what");
-  var RandomSnapShot = Math.random() * (999999999999 - 10000) + 10000;
+  var RandomSnapShot =  Math.floor(Math.random() * (999999999999 - 10000 + 1)) + 10000;
   fs.writeFile(__dirname + `/upload/UpLoad-${RandomSnapShot}.xml`, format(req.body.data,{
     
     collapseContent: true, 

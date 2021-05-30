@@ -238,7 +238,7 @@ function AddClassesToSpan(id, node) {
 
 function UpdateOutPutWithChanges(i) 
 {
-    var string = tag_list[i].tag.value;
+    var string = tag_list[i].tag.value.trim();
     if (string[0] === "<" && string[string.length - 1] === ">") 
     {
         string = string.substring(1, string.length - 1);
@@ -254,6 +254,7 @@ function UpdateOutPutWithChanges(i)
             }
         }
     }
+    else if(string[0]!="" && string[0]!=undefined && string[0]!= null){ createWarning("can't recognize string "+string+"Make sure all fields have the begin/end tags <>", "XML_inputText_Div", " alert-danger");}
 }
 
 function HandleWarningsAndErrors({length}, string, Temp_inputNodes, i) {
@@ -277,11 +278,11 @@ function createWarning(text,parentID,warningType){
     if(container.childNodes.length>3) return
     var div=document.createElement("div");
    
-    div.innerHTML=text
+    div.innerText=text
    
     container.appendChild(div);
     $(div).addClass("alert "+warningType+" col-md-8 offset-md-3")
-    setTimeout(function(){$(div).fadeOut(2000,function(){$(this).remove()})}, 4000);
+    setTimeout(function(){$(div).fadeOut(2000,function(){$(this).remove()})}, 6000);
 }
 history.scrollRestoration = "manual"
 $(window).on('unload', function(){
