@@ -38,29 +38,30 @@ app.post('/download', function (req, res) {
 /// make the stuff
   savefile.save().then(() => {
     console.log("saved!")
+    res.send(format(req.body.data,{ collapseContent: true,}))
   });
 
- 
+ /*
   //console.log(  Math.floor(Math.random() * (999999999999 - 10000 + 1)) + 10000)
-  fs.writeFile(__dirname + `/tmp/UpLoad-${RandomSnapShot}.xml`, format(req.body.data,{
+  fs.writeFile(__dirname + `/upload/UpLoad-${RandomSnapShot}.xml`, format(req.body.data,{
     
     collapseContent: true, 
     
 }), 'utf8', function (err, data) {
     if (err) throw err;
     //res.send(data)
-    res.send(RandomSnapShot.toString())
+    
   });
-
+*/
   // Set disposition and send it.
 });
 
 app.get('/download', function (req, res) {
 
-  res.download(__dirname + `/tmp/Upload-${req.query.data}.xml`, function (err) {
+  res.download(__dirname + `/upload/Upload-${req.query.data}.xml`, function (err) {
     if (err) throw err;
     setTimeout(() => {
-      fs.unlink(__dirname + `/tmp/Upload-${req.query.data}.xml`, (err) => {
+      fs.unlink(__dirname + `/upload/Upload-${req.query.data}.xml`, (err) => {
         if (err) {
           console.error(err)
           return
