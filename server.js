@@ -29,7 +29,20 @@ app.post('/download', function (req, res) {
   //console.log(req.body.data)
   // res.send("what");
   var RandomSnapShot =  Math.floor(Math.random() * (999999999999 - 10000 + 1)) + 10000;
-  fs.writeFile(__dirname + `/upload/UpLoad-${RandomSnapShot}.xml`, format(req.body.data,{
+  const savefile = new SaveFiles({
+  
+    Name: "MyUpLoad-"+RandomSnapShot,
+    Content: format(req.body.data,{ collapseContent: true,})
+   
+  })
+/// make the stuff
+  savefile.save().then(() => {
+    console.log("saved!")
+  });
+
+ 
+  //console.log(  Math.floor(Math.random() * (999999999999 - 10000 + 1)) + 10000)
+  fs.writeFile(__dirname + `/tmp/UpLoad-${RandomSnapShot}.xml`, format(req.body.data,{
     
     collapseContent: true, 
     
@@ -44,10 +57,10 @@ app.post('/download', function (req, res) {
 
 app.get('/download', function (req, res) {
 
-  res.download(__dirname + `/upload/Upload-${req.query.data}.xml`, function (err) {
+  res.download(__dirname + `/tmp/Upload-${req.query.data}.xml`, function (err) {
     if (err) throw err;
     setTimeout(() => {
-      fs.unlink(__dirname + `/upload/Upload-${req.query.data}.xml`, (err) => {
+      fs.unlink(__dirname + `/tmp/Upload-${req.query.data}.xml`, (err) => {
         if (err) {
           console.error(err)
           return
