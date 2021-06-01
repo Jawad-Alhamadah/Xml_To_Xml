@@ -133,14 +133,3 @@ app.get("/hehe", (req, res) => {
     time: "sgs"
   })
 })
-
-fs.readFile(__dirname + '/upload/test.xml', 'utf8', function (err, data) {
-  if (err) throw err;
-  var options = {
-    compact: true,
-    elementNameFn: function (val) {
-      return val.replace('foo:', '').toUpperCase();
-    }
-  };
-  var result = convert.xml2json(data, options);
-});
