@@ -26,8 +26,7 @@ app.use(bodyParser.xml())
 
 
 app.post('/download', function (req, res) {
-  //console.log(req.body.data)
-  // res.send("what");
+
   var RandomSnapShot =  Math.floor(Math.random() * (999999999999 - 10000 + 1)) + 10000;
   const savefile = new SaveFiles({
   
@@ -41,19 +40,7 @@ app.post('/download', function (req, res) {
     res.send(format(req.body.data,{ collapseContent: true,}))
   });
 
- /*
-  //console.log(  Math.floor(Math.random() * (999999999999 - 10000 + 1)) + 10000)
-  fs.writeFile(__dirname + `/upload/UpLoad-${RandomSnapShot}.xml`, format(req.body.data,{
-    
-    collapseContent: true, 
-    
-}), 'utf8', function (err, data) {
-    if (err) throw err;
-    //res.send(data)
-    
-  });
-*/
-  // Set disposition and send it.
+
 });
 
 app.get('/download', function (req, res) {
@@ -73,8 +60,6 @@ app.get('/download', function (req, res) {
 
   })
 
-
-  // Set disposition and send it.
 });
 
 
@@ -92,7 +77,7 @@ mongoose.connect(ConnectionString, {
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/upload'));
 app.post('/upload', upload.single('avatar'), (req, res) => {
-  console.log(req.file.filename)
+ 
   fs.readFile(__dirname + '/upload/' + req.file.filename, 'utf8', function (err, data) {
     if (err) throw err;
     var options = {

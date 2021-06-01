@@ -5,7 +5,6 @@ var parser = new DOMParser();
 var xmlDoc_input;
 var xmlDoc_output;
 var list = [];
-//var format = require('xml-formatter');
 //here we create a few initial elements to structure the demo.
 var row = document.createElement('div');
 var col = document.createElement('div');
@@ -215,7 +214,7 @@ function SetAttribute(xmlDoc, TagsNames, attributeName, attributeValue) {
 }
 
 function AddAttribute(h1, xmlDoc, attributeName, attributeValue) {
-    console.log(h1);
+ 
     var att = xmlDoc.createAttribute(attributeName);
     att.value = attributeValue;
     h1.setAttribute(attributeName, attributeValue);
@@ -327,7 +326,7 @@ $("#DownloadButton").click(function (e) {
         cache: false,
         contentType: "application/json",
         success: function (data) {
-            console.log(data)
+            
            //we add the random just to avoid mixing the files names.
             var RandomSnapShot =  Math.floor(Math.random() * (999999999999 - 10000 + 1)) + 10000;
             // window.open(`/download?data=${data}`);
