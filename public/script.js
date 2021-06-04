@@ -66,12 +66,18 @@ function SegmentXMLFile(xmlDoc, XML_Paragraph_element, id) {
     //send the XML document and the element that is going to be filled with it.
     SegmentingProcess(xmlDoc, XML_Paragraph_element, id);
     var tempAllTags = xmlDoc.querySelectorAll("*")
+    
     if (id === "output_Para_element") output_nodes = [...tempAllTags];
-    if (id === "input_Para_element")
+    if (id === "input_Para_element") {
+        tag_form_element.querySelectorAll("p").forEach((item)=>{
+            item.parentNode.removeChild(item);
+        });
         for (var i = 0; i < tempAllTags.length; i++) {
             list.push(tempAllTags[i]);
             createTagElements(tempAllTags[i])
         };
+        
+    }
     if (XML_outputParagraph_element.childNodes.length == 0) {
         $("p>label").addClass("grayed");
         $("p>input").attr("disabled", true);

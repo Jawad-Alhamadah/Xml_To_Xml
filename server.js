@@ -94,8 +94,8 @@ app.post('/upload', upload.single('avatar'), (req, res) => {
 app.post('/post-input', upload.single('filename'), (req, res) => {
   fs.readFile(__dirname + '/upload/' + req.file.filename, 'utf8', function (err, data) {
     if (err) throw err;
-    res.end(data, () => {
-
+    res.end( format(data,{ collapseContent: true,}), () => {
+     
       fs.unlink(__dirname + '/upload/' + req.file.filename, (err) => {
         if (err) {
           console.error(err)
